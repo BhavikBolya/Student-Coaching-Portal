@@ -237,6 +237,7 @@ if(isset($_POST['submit2'])){
   $gen= $_POST["gender"];
   $em= $_POST["email"];
   $fee=$_POST["paisa"];
+  
   $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
   $cleardb_server = $cleardb_url["host"];
   $cleardb_username = $cleardb_url["user"];
