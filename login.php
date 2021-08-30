@@ -26,7 +26,7 @@
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
