@@ -18,9 +18,9 @@
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li><a href="aboutus.html">About</a></li>
+        <li><a href="/aboutus.html">About</a></li>
         <li><a href="/register.php">Register</a></li>
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/login.php">Login</a></li>
+        <li id="log"><a href="/login.php">Login</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>

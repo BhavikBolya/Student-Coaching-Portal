@@ -28,7 +28,7 @@
   <div class="container">
     <h3>Student Details</h3>
     <hr><br>
-    <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/register.php" onsubmit="return validate()">
+    <form method="post" action="/register.php" onsubmit="return validate()">
       <label class="studname">Student Name</label>
       <br>
       <div class="your-class">
@@ -255,7 +255,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
   function function_alert() { 
       echo "<script>
         alert('Registered Successfully');
-        window.location.href='http://localhost/STUDENT-COACHING-PORTAL/login.php';
+        window.location.href='/login.php';
         </script>"; 
       }
 $sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
