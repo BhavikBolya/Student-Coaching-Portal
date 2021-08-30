@@ -2,14 +2,22 @@
 session_start();
 if($_SESSION["user"])
 {
-  $conn = mysqli_connect("localhost", "root", "", "valorant");
+  $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+  $cleardb_server = $cleardb_url["host"];
+  $cleardb_username = $cleardb_url["user"];
+  $cleardb_password = $cleardb_url["pass"];
+  $cleardb_db = substr($cleardb_url["path"],1);
+  $active_group = 'default';
+  $query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());
 }
 $result = mysqli_query($conn,"SELECT * FROM student_table");
 } 
-else header("Location:Homepage.html");
+else header("Location:index.php");
 ?>
 
 <!DOCTYPE html>
@@ -129,7 +137,7 @@ else header("Location:Homepage.html");
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/adminlogout.php">Logout</a></li>
+        <li id="log"><a href="/adminlogout.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -145,7 +153,7 @@ else header("Location:Homepage.html");
       <nav class="sidenav">
         <ul>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="http://localhost/STUDENT-COACHING-PORTAL/update.php">Update Student</a></li>
+          <li><a href="/update.php">Update Student</a></li>
         </ul>
       </nav>
     </div>

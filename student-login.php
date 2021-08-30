@@ -6,7 +6,7 @@ if($_SESSION["first"])
   $subs = $_SESSION["subs"];
   $subjects= explode(",",$subs);
 }
-else header("Location:Homepage.html");
+else header("Location:index.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +61,7 @@ else header("Location:Homepage.html");
           <i class="fas fa-times"></i>
         </div>
         <li><a>Hello, <?php echo $first_name; ?></a></li>
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/logout.php">Logout</a></li>
+        <li id="log"><a href="/logout.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>

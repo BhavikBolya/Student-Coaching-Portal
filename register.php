@@ -15,7 +15,7 @@
       <div class="icon cancel-btn">
         <i class="fas fa-times"></i>
       </div>
-      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="/index.php">Home</a></li>
     </ul>
     <div class="icon menu-btn">
       <i class="fas fa-bars"></i>
@@ -237,7 +237,7 @@ if(isset($_POST['submit2'])){
   $gen= $_POST["gender"];
   $em= $_POST["email"];
   $fee=$_POST["paisa"];
-  
+
   $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
   $cleardb_server = $cleardb_url["host"];
   $cleardb_username = $cleardb_url["user"];

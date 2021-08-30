@@ -1,12 +1,20 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "valorant");
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());
 }
 function function_alert() { 
     echo "<script>
       alert('Updated Successfully');
-      window.location.href='http://localhost/STUDENT-COACHING-PORTAL/update.php';
+      window.location.href='/update.php';
       </script>"; 
     }
 if(count($_POST)>0) {
@@ -31,14 +39,14 @@ $row= mysqli_fetch_array($result);
 <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo2.png"></a>
+        <a href="/index.php"><img src="Templates/Images/logo2.png"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/admin.php">Dashboard</a></li>
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/Homepage.html">Logout</a></li>
+        <li id="log"><a href="/admin.php">Dashboard</a></li>
+        <li id="log"><a href="/index.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>

@@ -20,7 +20,7 @@
   <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo.png"  width="147"></a>
+        <a href="/index.php"><img src="Templates/Images/logo.png"  width="147"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
