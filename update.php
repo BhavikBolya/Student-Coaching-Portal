@@ -17,7 +17,7 @@ if (!$conn) {
 }
 $result = mysqli_query($conn,"SELECT * FROM student_table");
 } 
-else header("Location:Homepage.html");
+else header("Location:index.php");
 ?>
 <!DOCTYPE html>
 <html>
