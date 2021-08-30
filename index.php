@@ -98,7 +98,7 @@
     <button class="open-button" onclick="openForm()">Admin</button>
 
   <div class="form-popup" id="myForm">
-    <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/checklogin.php" class="form-container">
+    <form method="post" action="/checklogin.php" class="form-container">
       <h1 style="text-align: center;">Login</h1>
 
       <label for="email"><b>Username</b></label>
